@@ -1,3 +1,5 @@
+import {WeatherCode} from '../utils/types';
+
 type WeatherImage = Record<
   'day' | 'night',
   {
@@ -5,36 +7,6 @@ type WeatherImage = Record<
     image: string;
   }
 >;
-
-type WeatherCode =
-  | '0'
-  | '1'
-  | '2'
-  | '3'
-  | '45'
-  | '48'
-  | '51'
-  | '53'
-  | '55'
-  | '56'
-  | '57'
-  | '61'
-  | '63'
-  | '65'
-  | '66'
-  | '67'
-  | '71'
-  | '73'
-  | '75'
-  | '77'
-  | '80'
-  | '81'
-  | '82'
-  | '85'
-  | '86'
-  | '95'
-  | '96'
-  | '99';
 
 const items: Record<WeatherCode, WeatherImage> = {
   '0': {
@@ -310,11 +282,11 @@ const items: Record<WeatherCode, WeatherImage> = {
   '99': {
     day: {
       description: 'Thunderstorm With Hail',
-      image: 'http://openweathermap.org/img/wn/11d@2x.png',
+      image: 'https://openweathermap.org/img/wn/11d@2x.png',
     },
     night: {
       description: 'Thunderstorm With Hail',
-      image: 'http://openweathermap.org/img/wn/11n@2x.png',
+      image: 'https://openweathermap.org/img/wn/11n@2x.png',
     },
   },
 };
@@ -329,6 +301,7 @@ const items: Record<WeatherCode, WeatherImage> = {
  * @returns A "day" image representation of the WMO weather code
  */
 function getWeatherImage(weatherCode: WeatherCode) {
+  return items[weatherCode];
   // Write implementation for this function to return the "day" image for a given weather code.
 }
 
