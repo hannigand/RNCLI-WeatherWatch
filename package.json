@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.74.4"
+    "react-native": "0.74.4",
+    "react-test-renderer": "^18.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -21,7 +22,10 @@
     "@react-native/eslint-config": "0.74.86",
     "@react-native/metro-config": "0.74.86",
     "@react-native/typescript-config": "0.74.86",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react-native": "12.5.2",
+    "@testing-library/user-event": "^14.5.2",
     "@types/jest": "29.5.12",
     "@types/react": "^18.2.6",
     "babel-jest": "^29.6.3",

@@ -1,13 +1,10 @@
-import 'react-native';
 import React from 'react';
+import '@testing-library/jest-dom';
+import {fireEvent, render, screen} from '@testing-library/react-native';
 import App from '../App';
 
-import {render, screen} from '@testing-library/react-native';
-
-it('should render the App', () => {
+it('check wether component render the App', async () => {
   render(<App />);
-
-  expect(
-    screen.getByText('Open up App.tsx to start working on your app!'),
-  ).toBeTruthy();
+  await screen.getByTestId('input-search');
+  await screen.getByTestId('input-search-img');
 });
