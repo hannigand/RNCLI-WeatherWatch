@@ -21,11 +21,13 @@ const SearchBox = ({
     <>
       <View style={styles.search_container}>
         <Image
+          testID="input-search-img"
           source={require('../../../assets/icons/search.png')}
           style={{width: 25, height: 25}}
-          alt='search-image'
+          alt="search-image"
         />
         <TextInput
+          testID="input-search"
           value={searchInputValue}
           placeholder={INPUT_PLACEHOLDER}
           onChangeText={handleAreaSearch}

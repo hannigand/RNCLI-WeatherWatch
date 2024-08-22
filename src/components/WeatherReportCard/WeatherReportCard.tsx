@@ -18,7 +18,7 @@ const WeatherReportCard = ({
           <View style={styles.list_header}>
             <Text style={styles.font_20_bold}>{title}</Text>
           </View>
-          <ScrollView horizontal>
+          <ScrollView horizontal testID="weather-report-cards" >
             <View style={styles.row_with_p_16}>
               {dataToBeVisible &&
                 Array.isArray(dataToBeVisible) &&
@@ -38,6 +38,7 @@ const WeatherReportCard = ({
                         </Text>
                       )}
                       <Image
+                        testID="weather-img"
                         source={{
                           uri: `${getImage.day.image.replace('http', 'https')}`,
                         }}

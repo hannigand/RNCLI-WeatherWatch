@@ -10,6 +10,7 @@ export const fetchWeatherData = async (values: ICoordinatesProps) => {
     console.log(err);
   }
 };
+
 export const fetchAreaWeatherSearch = async (searchedValue: string) => {
   try {
     const url = `https://geocoding-api.open-meteo.com/v1/search?name=${searchedValue}`;

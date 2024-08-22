@@ -9,7 +9,7 @@ const Cards = ({time, city, weather_code, temp}: ICardsProps) => {
   const getWeatherData = getWeatherImage(weather_code);
 
   return (
-    <View style={styles.card_container}>
+    <View style={styles.card_container} testID='card-item'>
       <View style={styles.current_weather}>
         <View>
           <Text style={styles.weather_font_title}>{"Tonight's Weather"}</Text>
