@@ -8,6 +8,8 @@ it('should render the App', () => {
   render(<App />);
 
   expect(
-    screen.getByText('Open up App.tsx to start working on your app!'),
+    screen.getByText('Loading...'),
   ).toBeTruthy();
+
+
 });
