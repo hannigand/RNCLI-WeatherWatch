@@ -299,37 +299,32 @@ const items: Record<WeatherCode, WeatherImage> = {
   },
   '96': {
     day: {
-      description: 'Light Thunderstorms With Hail',
+      description: 'Thunderstorm with Light Hail',
       image: 'http://openweathermap.org/img/wn/11d@2x.png',
     },
     night: {
-      description: 'Light Thunderstorms With Hail',
+      description: 'Thunderstorm with Light Hail',
       image: 'http://openweathermap.org/img/wn/11n@2x.png',
     },
   },
   '99': {
     day: {
-      description: 'Thunderstorm With Hail',
+      description: 'Thunderstorm with Heavy Hail',
       image: 'http://openweathermap.org/img/wn/11d@2x.png',
     },
     night: {
-      description: 'Thunderstorm With Hail',
+      description: 'Thunderstorm with Heavy Hail',
       image: 'http://openweathermap.org/img/wn/11n@2x.png',
     },
   },
 };
 
-/**
- * A function to return an image representation of a WMO weather code.
- * @{link: https://www.nodc.noaa.gov/archive/arc0021/0002199/1.1/data/0-data/HTML/WMO-CODE/WMO4677.HTM}
- *
- * The image mapping was obtained from Github and uses Open Weather Map imagery.
- * @{link: https://gist.github.com/stellasphere/9490c195ed2b53c707087c8c2db4ec0c}
- * @param weatherCode The WMO weather code
- * @returns A "day" image representation of the WMO weather code
- */
-function getWeatherImage(weatherCode: WeatherCode) {
-  // Write implementation for this function to return the "day" image for a given weather code.
-}
-
-export default getWeatherImage;
+export const getWeatherImage = (weatherCode: WeatherCode): string => {
+  const weather: WeatherImage | undefined = items[weatherCode];
+  if (weather) {
+    return weather.day.image;
+  } else {
+    // Default fallback image if weatherCode doesn't match
+    return 'http://openweathermap.org/img/wn/unknown.png';
+  }
+};
