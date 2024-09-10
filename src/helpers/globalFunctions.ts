@@ -48,6 +48,9 @@ export const formatDate = (currentDate?: string) => {
     let date;
     if (currentDate) {
         date = new Date(currentDate);
+        if (isNaN(date.getTime())) {
+            return 'Invalid Date';
+        }
     } else {
         date = new Date();
     }

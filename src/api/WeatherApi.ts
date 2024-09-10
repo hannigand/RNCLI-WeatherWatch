@@ -30,8 +30,7 @@ const getLocationData = async (name: string): Promise<LocationResponse | null> =
     const response = await axios.get<LocationResponse>(url);
     return response.data;
   } catch (error) {
-    console.error('Error fetching location data: in api call', error);
-    return null;
+    return null
   }
 };
 

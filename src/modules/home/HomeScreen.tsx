@@ -9,7 +9,7 @@ const HomeScreen = (): React.JSX.Element => {
   const {locationData, weatherData, weeklyForecast, weatherImage} =
     useHomeScreen();
   return (
-    <SafeAreaView style={styles.rootContainerStyle}>
+    <SafeAreaView style={styles.rootContainerStyle} testID="homescreen">
       <View>
         <Text style={styles.locationName}>{locationData?.name}</Text>
         <Text style={styles.currentDate}>

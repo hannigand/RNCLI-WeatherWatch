@@ -15,6 +15,7 @@ const FutureWeatherDataItem = ({
       </Text>
       <View style={styles.imageViewStyle}>
         <Image
+          testID="weather-image"
           style={styles.imageStyle}
           source={{
             uri: item.weatherImage.image,

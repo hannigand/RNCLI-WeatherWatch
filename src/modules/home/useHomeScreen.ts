@@ -26,7 +26,7 @@ const useHomeScreen = () => {
         console.log('No data found');
       }
     } catch (error) {
-      console.error('Error fetching location data: in ', error);
+      console.log('Error fetching location data: in ', error);
     }
   };
 
