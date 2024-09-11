@@ -25,7 +25,7 @@ const getWeatherForecast = async (latitude: number, longitude: number): Promise<
 };
 
 const getLocationData = async (name: string): Promise<LocationResponse | null> => {
-  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(name)}`;
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${name}`;
   try {
     const response = await axios.get<LocationResponse>(url);
     return response.data;

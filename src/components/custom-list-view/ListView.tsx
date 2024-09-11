@@ -18,6 +18,7 @@ const ListView = ({
         <FlatList
           horizontal
           data={data}
+          showsHorizontalScrollIndicator={false}
           renderItem={({item}) => <FutureWeatherDataItem item={item} />}
         />
       </View>

@@ -5,8 +5,23 @@ export const styles = StyleSheet.create({
   rootContainerStyle: {
     flex: 1,
     backgroundColor: Colors.lightBlue,
+  },
+  subContainerStyle: {
     paddingHorizontal: horizontalScale(10),
     paddingVertical: verticalScale(10),
+  },
+  topDateContainer: {
+    flexDirection: 'row',
+    justifyContent: "space-between"
+  },
+  searchIconContainerStyle: {
+    height: moderateScale(30),
+    width: moderateScale(30),
+    margin: moderateScale(10)
+  },
+  searchIconStyle: {
+    height: '100%',
+    width: '100%'
   },
   locationName: {
     fontSize: moderateScale(35),
@@ -31,7 +46,6 @@ export const styles = StyleSheet.create({
   },
   degreeIconViewStyle: {
     flexDirection: 'row',
-    alignItems: 'center'
   },
   degreeOuterViewStyle: {
     justifyContent: 'center',
@@ -61,5 +75,38 @@ export const styles = StyleSheet.create({
     fontSize: moderateScale(22),
     color: Colors.grey,
     fontWeight: '500'
+  },
+  searchBarContainer: {
+    paddingHorizontal: horizontalScale(10),
+    marginVertical: verticalScale(10),
+  },
+  searchInput: {
+    borderWidth: 1,
+    borderColor: Colors.lightGrey,
+    borderRadius: moderateScale(8),
+    padding: moderateScale(8),
+    fontSize: moderateScale(16),
+  },
+  locationOption: {
+    paddingVertical: verticalScale(10),
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.white,
+  },
+  locationOptionText: {
+    fontSize: moderateScale(16),
+    color: Colors.grey,
+  },
+  locationListStyle: {
+    maxHeight: verticalScale(200)
+  },
+  listEmptyContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticalScale(10)
+  },
+  listEmptyTextStyle: {
+    fontSize: moderateScale(18),
+    color: Colors.black
   }
 });
